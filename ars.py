@@ -77,21 +77,21 @@ try:
     print(Colors.BOLD + Colors.OKBLUE + '''
     Banner                                                                  
           ''')
-    print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [     1] 0% ")
+    print(Colors.BOLD + Colors.OKGREEN + "Loading > [     1] 0% ")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [     2] 25%")
+    print(Colors.BOLD + Colors.OKGREEN + "Loading > [     2] 25%")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.WARNING + "LOADING >> [     3] 50%")
+    print(Colors.BOLD + Colors.WARNING + "Loading > [     3] 50%")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.WARNING + "LOADING >> [     4] 75%")
+    print(Colors.BOLD + Colors.WARNING + "Loading > [     4] 75%")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.FAIL + "LOADING >> [        5] 100%")
+    print(Colors.BOLD + Colors.FAIL + "Loading > [        5] 100%")
     
     for i in range(threads):
         try:
             t = Thread(target=goForDosThatThing)
             t.start()
         except KeyboardInterrupt:
-            print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")    
+            print(Colors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")    
 except KeyboardInterrupt:
-    print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")
+    print(Colors.BOLD + Colors.FAIL + "\r\n[-] Canceled by user")
