@@ -19,7 +19,7 @@ class Colors:
     FAIL = '\033[91m'
     BOLD = '\033[1m'
     
-print(Colors.BOLD + ConsoleColors.WARNING + '''
+print(Colors.BOLD + Colors.WARNING + '''
 Banner 
 
          
@@ -27,7 +27,7 @@ Banner
     
 def getport():
     try:
-        p = int(input(Colors.BOLD + Colors.OKGREEN + "╰─> Port:\r\n"))
+        p = int(input(Colors.BOLD + Colors.BOLD + "╰─> Port:\r\n"))
         return p
     except ValueError:
         print(Colors.BOLD + Colors.WARNING + "ERROR Port must be a number, Set Port to default " + Colors.OKGREEN + "80")
