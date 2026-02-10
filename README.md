@@ -1,1 +1,1 @@
-# Ars-ddos
+# BAN-ddos
