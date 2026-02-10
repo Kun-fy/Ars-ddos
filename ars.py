@@ -28,10 +28,8 @@ class Colors:
     WHITE = '\033[37m'
     RESET = '\033[0m' # Resets color to default
 
-# Example usage:
-print(RED + "This text is red." + RESET)
 
-print(Colors.BOLD + Colors.BLACK + '''
+print(Colors.BOLD + Colors.BLACK + RESET +'''
 Banner 
 
          
