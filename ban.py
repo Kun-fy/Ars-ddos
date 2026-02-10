@@ -52,7 +52,7 @@ ip = socket.gethostbyname(host)
 
 bytesToSend = random._urandom(2450)
 
-i = 2;
+i = 0;
 
 
 
